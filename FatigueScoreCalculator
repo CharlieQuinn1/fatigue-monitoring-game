@@ -1,0 +1,10 @@
+# input
+reaction_time = float(input("Enter Reaction Time Score: "))
+accuracy = float(input("Enter Accuracy Score: "))
+survey_feedback = float(input("Enter Survey Feedback Score: "))
+
+# calculation
+fatigue_score = (0.3 * reaction_time) + (0.4 * accuracy) + (0.3 * survey_feedback)
+
+# fFinal resultt
+print("Final Fatigue Score:", fatigue_score)
