@@ -19,7 +19,7 @@ root.geometry("600x400")
 welcome_label = tk.Label(root, text="Welcome back, (ame)", font=("Arial", 16))
 welcome_label.pack(pady=10)
 
-# Left-side button
+# Leftbutton
 left_frame = tk.Frame(root)
 left_frame.place(x=50, y=80)
 
