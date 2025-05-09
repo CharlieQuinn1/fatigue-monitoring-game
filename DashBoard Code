@@ -1,0 +1,45 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def start_new_session():
+    messagebox.showinfo("Start Sessio", "Starting new fatigue session...")
+
+def view_past_results():
+    messagebox.showinfo("Past Results", "Showing past results...")
+
+def exit_app():
+    root.destroy()
+
+# Main 
+root = tk.Tk()
+root.title("Employee Fatigue Monitor")
+root.geometry("600x400")
+
+# Welcome sector
+welcome_label = tk.Label(root, text="Welcome back, (ame)", font=("Arial", 16))
+welcome_label.pack(pady=10)
+
+# Left-side button
+left_frame = tk.Frame(root)
+left_frame.place(x=50, y=80)
+
+btn_start = tk.Button(left_frame, text="Start new session", width=20, command=start_new_session)
+btn_start.pack(pady=5)
+
+btn_view = tk.Button(left_frame, text="View Past Results", width=20, command=view_past_results)
+btn_view.pack(pady=5)
+
+# Fatigue Score
+fatigue_score_label = tk.Label(root, text="Fatigue Score: 1/100", font=("Arial", 12), bg="white", relief="solid", width=20, height=2)
+fatigue_score_label.place(x=400, y=80)
+
+# Graph Placehloler
+graph_frame = tk.Label(root, text="Fatigue Trend Graph", bg="lightgrey", relief="sunken", width=30, height=10)
+graph_frame.place(x=300, y=150)
+
+# Exit outbuttton
+btn_exit = tk.Button(root, text="Exit App", width=15, command=exit_app)
+btn_exit.place(x=430, y=320)
+
+# Run App
+root.mainloop()
