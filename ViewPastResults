@@ -1,0 +1,73 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def return_to_main():
+    messagebox.showinfo("Return to Main DashBoard", "Returning to the main dashboard...")
+
+# Main
+root = tk.Tk()
+root.title("View Past Results")
+root.geometry("600x450")
+
+
+top_frame = tk.Frame(root)
+top_frame.pack(pady=15)
+
+# TitleLabeL
+title_label = tk.Label(top_frame, text="View Past Results", font=("Arial", 16))
+title_label.pack()
+
+# Line
+line1 = tk.Canvas(root, height=2, bg="black", relief="sunken", bd=0)
+line1.pack(fill="x", pady=5)
+
+# Split
+split_frame = tk.Frame(root)
+split_frame.pack(pady=15)
+
+# Left Side
+left_frame = tk.Frame(split_frame, width=250, height=200)
+left_frame.pack(side="left", padx=20)
+
+most_recent_title = tk.Label(left_frame, text="Most Recent Results", font=("Arial", 12))
+most_recent_title.pack(anchor="w", pady=5)
+
+reaction_time_label = tk.Label(left_frame, text="Reaction Time: ", font=("Arial", 12))
+reaction_time_label.pack(anchor="w", pady=5)
+
+memory_accuracy_label = tk.Label(left_frame, text="Memory Accuracy Score: ", font=("Arial", 12))
+memory_accuracy_label.pack(anchor="w", pady=5)
+
+# Right Side - First Ever Results
+right_frame = tk.Frame(split_frame, width=250, height=200)
+right_frame.pack(side="right", padx=20)
+
+first_ever_title = tk.Label(right_frame, text="First Ever Results", font=("Arial", 12))
+first_ever_title.pack(anchor="w", pady=5)
+
+reaction_time_first_ever_label = tk.Label(right_frame, text="Reaction Time Score: ", font=("Arial", 12))
+reaction_time_first_ever_label.pack(anchor="w", pady=5)
+
+memory_accuracy_first_ever_label = tk.Label(right_frame, text="Memory Accuracy Score: ", font=("Arial", 12))
+memory_accuracy_first_ever_label.pack(anchor="w", pady=5)
+
+# Line
+line2 = tk.Canvas(root, height=2, bg="black", relief="sunken", bd=0)
+line2.pack(fill="x", pady=5)
+
+# ImprovementPart
+improvement_frame = tk.Frame(root)
+improvement_frame.pack(pady=15)
+
+improvement_label = tk.Label(improvement_frame, text="You have improved by 100%", font=("Arial", 14))
+improvement_label.pack(anchor="w", pady=5)
+
+improvement_percentage_label = tk.Label(improvement_frame, text="(Improvement Percentage)", font=("Arial", 12))
+improvement_percentage_label.pack(anchor="w", pady=5)
+
+#  Button Retu
+btn_return = tk.Button(root, text="Return to Main Dashboard", width=20, command=return_to_main)
+btn_return.pack(side="bottom", pady=20)
+
+# Run the App
+root.mainloop()
