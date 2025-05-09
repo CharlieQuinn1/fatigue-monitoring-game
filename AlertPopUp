@@ -1,0 +1,16 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# show the alert
+def show_score_alert():
+    messagebox.showinfo("Score Update", "Score Increased, Well done!")
+
+# Main 
+root = tk.Tk()
+root.withdraw()  # Hide the root window (we just want the pop-up)
+
+# display the alert
+show_score_alert()
+
+# Run the application
+root.mainloop()
