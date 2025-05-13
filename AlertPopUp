@@ -7,7 +7,7 @@ def show_score_alert():
 
 # Main 
 root = tk.Tk()
-root.withdraw()  # Hide the root window (we just want the pop-up)
+root.withdraw()  # Hide the root window 
 
 # display the alert
 show_score_alert()
